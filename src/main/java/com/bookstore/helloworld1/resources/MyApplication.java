@@ -10,11 +10,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 @ApplicationPath("rest")
-public class MyApplication extends Application{
+public class MyApplication extends Application {
     @Override
     public Set<Class<?>> getClasses(){
-        Set<Class<?>> classes=new HashSet<>();
+        Set<Class<?>> classes = new HashSet<>();
         classes.add(HelloWorldResource.class);
         return classes;
     }
 }
+
