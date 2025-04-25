@@ -16,24 +16,37 @@
         <jakartaee>8.0.0</jakartaee>
     </properties>
     
-    <dependencies>
-        <dependency>
-            <groupId>jakarta.platform</groupId>
-            <artifactId>jakarta.jakartaee-api</artifactId>
-            <version>${jakartaee}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.containers</groupId>
-            <artifactId>jersey-container-servlet</artifactId>
-            <version>2.32</version>
-        </dependency>
-        <dependency>
-            <groupId>org.glassfish.jersey.inject</groupId>
-            <artifactId>jersey-hk2</artifactId>
-            <version>2.32</version>
-        </dependency>   
-    </dependencies>
+<dependencies>
+    <!-- Jersey core server -->
+    <dependency>
+        <groupId>org.glassfish.jersey.core</groupId>
+        <artifactId>jersey-server</artifactId>
+        <version>4.0.0-M2</version>
+        <type>jar</type>
+    </dependency>
+
+    <!-- Jersey Servlet container -->
+    <dependency>
+        <groupId>org.glassfish.jersey.containers</groupId>
+        <artifactId>jersey-container-servlet</artifactId>
+        <version>2.32</version>
+    </dependency>
+
+    <!-- Jersey HK2 for dependency injection -->
+    <dependency>
+        <groupId>org.glassfish.jersey.inject</groupId>
+        <artifactId>jersey-hk2</artifactId>
+        <version>2.32</version>
+    </dependency>
+
+    <!-- JAX-RS API (use javax.ws.rs instead of jakarta.ws.rs for Jersey 2.x) -->
+    <dependency>
+        <groupId>javax.ws.rs</groupId>
+        <artifactId>javax.ws.rs-api</artifactId>
+        <version>2.1.1</version>
+    </dependency>
+</dependencies>
+
     
      <build>
         <plugins>
